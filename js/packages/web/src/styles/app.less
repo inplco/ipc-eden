@@ -1,0 +1,259 @@
+@import '~antd/es/style/themes/dark.less';
+@import '~antd/dist/antd.dark.less';
+
+html {
+  overflow-y: scroll;
+  width: 100vw;
+  overflow-x: hidden;
+}
+#root {
+  height: 100%;
+  font-family: 'SF-Mono';
+}
+
+#root::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  --row-highlight: @background-color-base;
+  margin: 0;
+  background-image: url('/img/img2.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'SF-Mono' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.typewriter-end{
+  color: #ffffff;
+  margin-top: 20;
+  font-family: "SF-Mono";
+  &:after{
+    content: "_";
+    animation: blink 500ms linear infinite alternate;
+  }
+}
+
+.text_1 {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter;
+  display: block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+.text_1::after {
+  content: "  _";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes typewriter {
+  0%, 100% {
+    width: 0;
+  }
+  10%, 90% {
+    width: 8em;
+  }
+}
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.no-events {
+  pointer-events: none;
+}
+
+.ant-layout {
+  background: transparent !important;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+.square div {
+  position: relative;
+  padding-top: 100% !important;
+  transform: scale(1.3);
+  pointer-events: none;
+  width: 100%;
+}
+code {
+  font-family: 'SF-Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app-logo {
+  background-image: url('/img/banner.gif');
+  height: 32px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  width: 32px;
+}
+
+.app-title {
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+
+  h1 {
+    font-size: 36px;
+    margin: 0px;
+  }
+}
+
+.ant-image-img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.ant-card-cover {
+  position: relative;
+  overflow: hidden;
+  .ant-image-img,
+  video {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.placebid {
+  color: #bba8e3;
+}
+
+.card-close-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #434343 !important;
+
+  :hover {
+    background-color: #434343;
+  }
+}
+
+.text-center {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ant-upload.ant-upload-drag {
+  border-radius: 8px;
+  border-color: transparent;
+}
+
+.tab-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+
+  color: @text-color-secondary;
+}
+
+.artist-image {
+  margin-left: 10px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.ant-tabs {
+  width: 100%;
+}
+
+.ant-avatar-group .ant-avatar {
+  border: 1px solid #434343;
+}
+
+.ant-avatar-group {
+  padding-bottom: 16px;
+}
+
+.ant-avatar-group .ant-avatar-image:not(:first-child) {
+  margin-left: -12px !important;
+}
+
+.creator-name {
+  font-size: 1.0rem;
+  padding-left: 10px;
+}
+
+.creators .info-content:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.creators {
+  // display: flex;
+  @media (max-width: 475px) {
+    flex-wrap: wrap;
+  }
+}
+
+.ant-tabs-tab-active {
+  .tab-title {
+    color: @text-color;
+  }
+}
+
+.full-history {
+  color: #6d6d6d;
+  padding-top: 5px;
+}
+
+.full-history:hover {
+  color: #fff;
+  transition: 150ms;
+  padding-top: 5px;
+}
+
+model-viewer {
+  --poster-color: transparent;
+}
