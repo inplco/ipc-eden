@@ -25,23 +25,23 @@ export default class MetaplexDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/logo2.png"
+            href="eden/logo2.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href="/logo2.png"
+            href="eden/logo2.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/logo2.png"
+            href="eden/logo2.png"
           />
           <meta name="theme-color" content="#000000" />
           <meta name="description" content="IPC Solana" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="eden/manifest.json" />
         </Head>
         <body>
           <Main />

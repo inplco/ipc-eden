@@ -42,12 +42,13 @@
     "prestart": "npm-link-shared ../common/node_modules/ . react",
     "start": "next dev",
     "build": "next build",
-    "export": "next export -o ../../build/web && touch ../../build/web/.nojekyll && echo 'www.sshmatrix.art' > ../../build/web/CNAME",
+    "export": "next export -o ../../build/web && touch ../../build/web/.nojekyll && echo 'eden.interplanetary.company' > ../../build/web/CNAME",
     "start:prod": "next start",
     "test": "jest",
     "deploy:ar": "yarn export && arweave deploy-dir  ../../build/web --key-file ",
-    "deploy:gh": "yarn export && gh-pages -d ../../build/web --repo https://github.com/necro-mancer/non-fungible-matrix -t true",
-    "deploy": "cross-env ASSET_PREFIX='' yarn build && yarn deploy:gh",
+    "deploy:gh": "yarn export && gh-pages -d ../../build/web --repo https://github.com/inplco/ipc-eden -t true",
+    "deploy:ic": "yarn export",
+    "deploy": "cross-env ASSET_PREFIX='/eden' yarn build && yarn deploy:ic",
     "format:fix": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\""
   },
   "browserslist": {
@@ -62,11 +63,7 @@
       "last 1 safari version"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/necro-mancer/non-fungible-matrix"
-  },
-  "homepage": ".",
+  "homepage": "https://www.interplanetary.company/",
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

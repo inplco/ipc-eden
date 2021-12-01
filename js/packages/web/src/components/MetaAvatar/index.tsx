@@ -10,7 +10,7 @@ const MetaAvatarItem = (props: {
 }) => {
   const { creator, size, alt } = props;
   const [noImage, setNoImage] = useState(false);
-  const image = creator.image || '/logo.png';
+  const image = creator.image || '/eden/logo.png';
 
   return (
     <Avatar
