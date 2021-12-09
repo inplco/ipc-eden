@@ -487,7 +487,7 @@ export function Notifications() {
       content={content}
       trigger="click"
     >
-      <img alt='logo' style={{ width: '64px' }} src='/eden/logo.png' />
+      <img alt='logo' style={{ width: '64px' }} src='/eden/logo1.gif' />
     </Popover>
   );
 

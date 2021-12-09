@@ -67,7 +67,7 @@ export const SetupView = () => {
       {!wallet.connected && (
         <p>
           <Button type="primary" className="app-btn" onClick={connect}>
-            Connect
+            CONNECT
           </Button>{' '}
           to configure store.
         </p>
