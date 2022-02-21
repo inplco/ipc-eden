@@ -116,10 +116,13 @@ const VideoArtContent = ({
     likelyVideo.startsWith('https://watch.videodelivery.net/') ? (
       <div className={`${className} square`}>
         <Stream
+          // @ts-ignore
           streamRef={(e: any) => playerRef(e)}
           src={likelyVideo.replace('https://watch.videodelivery.net/', '')}
           loop={true}
+          // @ts-ignore
           height={600}
+          // @ts-ignore
           width={600}
           controls={false}
           videoDimensions={{

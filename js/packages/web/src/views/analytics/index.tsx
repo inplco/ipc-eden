@@ -246,7 +246,7 @@ const MemoizedBar = React.memo(
         ],
       },
     };
-
+    // @ts-ignore
     return <Bar data={histoData} options={histoOptions} />;
   },
 );
